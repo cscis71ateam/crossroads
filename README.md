@@ -12,6 +12,7 @@ An web application for the future/potential/returning summer students at Harvard
 4.  
     * Team Name: A-Team
     * Team Roster:
+    
         | Name                  |  Role                                        |
         | :---------------------|  :-------------------------------------------|
         | Simon Soerensen       |  Scrum Master and Development Team Member    |
