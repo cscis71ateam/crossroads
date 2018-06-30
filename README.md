@@ -8,7 +8,7 @@ An web application for the future/potential/returning summer students at Harvard
 ## Project Part1:
 1. Our "Scrum Teams" group name in Canvas: **a-team**
 2. Our team name: A-Team. Our Slack channel in the course Slack team: **a-team**
-3. Public git repository for our team: Repo Name: "summer-harvard" and Repo URL: https://github.com/cscis71ateam/summer-harvard 
+3. Public git repository for our team: Repo Name: "summer-harvard" and Repo URL: https://github.com/cscis71ateam/crossroads 
 4.  
     * Team Name: **A-Team**
     * Team Roster:
