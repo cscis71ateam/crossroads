@@ -10,7 +10,7 @@ An web application for the future/potential/returning summer students at Harvard
 2. Our team name: A-Team. Our Slack channel in the course Slack team: a-team.
 3. Public git repository for our team: Repo Name: "summer-harvard" and Repo URL: https://github.com/cscis71ateam/summer-harvard 
 4.  
-    * Team Name: A-Team
+    * Team Name: **A-Team**
     * Team Roster:
     
         | Name                  |  Role                                        |
