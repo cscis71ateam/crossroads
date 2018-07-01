@@ -49,4 +49,4 @@ An web application for the future/potential/returning summer students at Harvard
     * Integration test is successfully completed
     * Feature can be demoed
     * Pushed to GitHub repo
-    * Deployed in prodution
+    * Deployed in production
