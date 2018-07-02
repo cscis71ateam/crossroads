@@ -41,7 +41,7 @@ An web application for the future/potential/returning summer students at Harvard
     * Estimated in story points 
     * Infrastructure and dev tools are ready
     * Meets the INVEST (Independent, Negotiable, Valuable, Estimable, Small & Testable) criteria
-16. Estimate of our PBIs is stored in our online tool Trello: https://trello.com/b/RdosOtmY/a-team-kanban-board
+16. Estimate of our PBIs is stored in our online tool Trello (please, see in the bracket beside each PBI title): https://trello.com/b/RdosOtmY/a-team-kanban-board
 17. Our estimatation of PBIs is in story points.
 18. We did a whole team relative size estimating activity. The name of the activity: **Planning Poker**
 18. Only our Development Team members participated in creating the estimates. 
