@@ -29,7 +29,7 @@ An web application for the future/potential/returning summer students at Harvard
     * Parents  
     * Local businesses
 9. A real stake holder: **Linh Nam**
-10. Detailed user persona: https://app.xtensio.com/edit/clceg25k
+10. Detailed user persona (URL): https://app.xtensio.com/edit/clceg25k. Also put a "User Persona" screenshot in the main repo folder.
 11. Initial product backlog URL: https://trello.com/b/RdosOtmY/a-team-kanban-board 
 12. We have 10 or more product backlog items in our product backlog (pls, see #11 above for URL).
 13. All product backlog items are expressed as excellent user stories (pls, see #11 above for URL).
