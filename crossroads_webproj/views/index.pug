@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  //Bootstrap row starts here inside the main container from the layout file.
+  .row
+  
+    //Create the list heading with the title.
+    .col-md-8.col-md-offset-2
+      h2.mt-5= title
+      br
+
+      //Put an instruction on how to create a new task.
+      h5 Use the 
+        a(href='/tasks/create').text-primary Create Task
+        |  menu item to create a new task.
+      br
+
+      //Present the data in a bootstrap table.
+      if flashMsgSuccess && flashMsgSuccess.length > 0
+                p.alert.alert-success #{flashMsgSuccess}
+      if flashMsgError && flashMsgError.length > 0
+                p.alert.alert-danger #{flashMsgFailure}
+      table.table.table-striped.table-inverse
+        thead
+          tr
+            th Task
+            th Start Date
+            th Target Finish Date
+            th Assigned To
+            th  
+            th   
+        tbody
+          //Repeat each task in the task list and put each task in a table row.
+          each task in taskList
+            tr
+              td #{task.description}
+              td #{moment(task.startDate).format('YYYY-MM-DD')}
+              td #{moment(task.endDate).format('YYYY-MM-DD')}
+              td #{task.assignee}
+              td: a(href='/tasks/update/' + task._id) Update
+              td: a(href='/tasks/delete/' + task._id) Delete
+

@@ -1,0 +1,80 @@
+extends layout
+
+block content
+  //Bootstrap row starts here inside the main container from the layout file.
+  .row
+  
+    //Create the list heading with the title.
+    .col-md-8.col-md-offset-2
+      h2.mt-5= title
+      br
+
+      //Put an instruction on how to test APIs.
+      div#instruc
+        h5.text-primary.strong How to test:
+        ol
+            li.text-primary.strong Create a New Task: Fill up the task form (at least provide "Description") and then click "Create New" button. Use "Read All" button to check the new task.
+            li.text-primary.strong Retrieve all Tasks: Just click the "Read All" button. Use this button to retrieve and copy a Task Id; or to check if a create, update or delete is successfull.
+            li.text-primary.strong Retrieve a Particular Task: Copy and paste the ID of a task into the "Task ID" field and then click "Read by Id" button.
+            li.text-primary.strong Update a Task: Copy and paste the ID of a task into the "Task ID" field, use the "Read by Id" button to display the fields values, change any or all fields, and then click "Update". Use "Read All" button to check the update.
+            li.text-primary.strong Delete a Task: Copy and paste the ID of a task into the "Task ID" field and then click "Delete" button. Use "Read All" button to check the deletion.
+
+      //h5 Use the 
+        a(href='/tasks/apitest').text-primary Test API
+        |  menu item to test APIs.
+      br
+      h5.text-primary To Read, Update or Delete a Specific Task:
+      form
+          div.form-group
+            label(for='id') Task ID:
+            input#id.form-control(type='text', placeholder='Task Id' name='id', autofocus)
+      
+      br
+      h5.text-primary To Create a New Task or Update an Existing Task:
+      form()
+          div.form-group
+            label(for='description') Task*:
+            input#description.form-control(type='text', placeholder='Task description' name='description', required autofocus)
+          div.form-row
+            div.form-group.col-md-6
+                label(for='startDate') Start Date:
+                input#startDate.form-control(type='date', placeholder='yyyy-dd-mm' name='startDate')
+            div.form-group.col-md-6
+                label(for='endDate') Target Finish Date:
+                input#endDate.form-control(type='date', placeholder='yyyy-dd-mm' name='endDate')
+          div.form-group
+            label(for='assignee') Assigned To:
+            input#assignee.form-control(type='text', placeholder='Assignee' name='assignee')
+          
+      br
+      button#create-new.btn.btn-primary(type='button') Create New
+      | &nbsp;
+      |
+      button#read-all.btn.btn-primary(type='button') Read All
+      | &nbsp;
+      |
+      button#read-by-id.btn.btn-primary(type='button') Read by Id
+      | &nbsp;
+      |
+      button#update.btn.btn-primary(type='button') Update
+      | &nbsp;
+      |
+      button#delete.btn.btn-primary(type='button') Delete
+      | &nbsp;
+      |
+      button#clearForm.btn.btn-primary(type='button') Reset Form
+
+      br
+      br
+      br
+      //Display status message.
+      h5#msg.text-primary.strong
+
+      br
+      div#read-all-content
+   
+    //jQuery
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+
+    //Load the local javascript file here
+    script(src="/javascripts/apitest.js")

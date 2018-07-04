@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+    //Bootstrap row starts here inside the main container coming from the layout file.
+    .row
+      .col-md-8.col-md-offset-2
+        h2.mt-5 Add a Task 
+          small.text-muted (* required field)
+        br
+
+        //Create a new task bootstrap form.
+        form(method='POST' action='/tasks/create/')
+          div.form-group
+            label(for='description') Task *:
+            input#task.form-control(type='text', placeholder='Task description' name='description', required autofocus)
+          div.form-row
+            div.form-group.col-md-6
+                label(for='startDate') Start Date:
+                input#startdate.form-control(type='date', placeholder='yyyy-dd-mm' name='startDate')
+            div.form-group.col-md-6
+                label(for='endDate') Target Finish Date:
+                input#enddate.form-control(type='date', placeholder='yyyy-dd-mm' name='endDate')
+          div.form-group
+            label(for='assignee') Assigned To:
+            input#name.form-control(type='text', placeholder='Assignee' name='assignee')
+          button.btn.btn-primary(type='submit') Add Task
+          | &nbsp;
+          |
+          a.btn.btn-primary(href='/' role='button') Cancel
