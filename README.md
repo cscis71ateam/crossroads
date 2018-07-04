@@ -94,52 +94,51 @@ We used the estimation activity Planning Poker to estimate as a team. Only the D
 We held a physical Daily Scrum at 10 am time-boxed to 15 minutes, facilitated by our Scrum Master, Simon.
 [INSERT PICTURE FROM DAILY SCRUM HERE]
 
-* *What did we do yesterday?*
+* *What did we do yesterday?* *
 Yesterday we did Sprint Planning and Backlog refinement so that we could have our PBIs meeting our Definition of Ready.
 
 After talking to Richard, we decided to change framework from Drupal to node.js/express as the main framework.
 
-**Mo** 
-* *What did you do yesterday?*
+**Mo:** 
+* *What did you do yesterday?* *
 Did research and installed the node.js and express framework. He put some additional detail on the Landing Page PBI.
 
-* *What are you gonna do today?*
+* *What are you gonna do today?* *
 Build infrastructure and start implementing the user story landing page.
 
-* *What are your impediments?*
+* *What are your impediments?* *
 Since we decided to changed framework, we all have to install new components and make readjust our Sprint Goal.
 
-**Anna** 
-* *What did you do yesterday?*
+**Anna:** 
+* *What did you do yesterday?* *
 Helped with organizing the Sprint Backlog. Looked for images for the landing page. 
 
-* *What are you gonna do today?*
+* *What are you gonna do today?* *
 Install new software and learn about the Node.js framework. Sit together with Mo to understand the infrastructure. 
 
-* *Impediment*
+* *Impediment* *
 Anna don't know node.js, so she has to learn the new framework. 
 
 **Chun**
-* *What did you do yesterday?*
+* *What did you do yesterday?* *
 Did research about node.js
 
-* *What are you gonna do today?*
+* *What are you gonna do today?* *
 Install new software and learn about the Node.js framework. Sit together with Mo to understand the infrastructure. 
 
-* *Impediments*
+* *Impediments* *
 Chun don't know node.js, so he has to learn the new framework. However, he alrady experience with Django and know how to research more.
 
 **Simon**
-* *What did you do yesterday?*
+* *What did you do yesterday?* *
 Researched on the node.js framework and set up the framework on his machine
 
-* *What are you gonna do today?*
+* *What are you gonna do today?* *
 Install new software and learn about the Node.js framework. Sit together with Mo to understand the infrastructure. 
 
-* *Impediment*
+* *Impediment* *
 Simon don't know node.js, so she has to learn the new framework. 
 
 **General**
-* *How do we remove impediments?*
+* *How do we remove impediments?* *
 After the meeting, the Development Team decided together with the Product Owner to break down the user stories into smaller items in order to lower the complexity and follow the INVEST principle.
-
