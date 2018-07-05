@@ -149,8 +149,7 @@ Our primary stakeholder Ms. Linh attended our Sprint Review. Attached is a photo
 
 
 
-<br/>
-<br/>
+
 ## Project Part1:
 1. Our "Scrum Teams" group name in Canvas: **a-team**
 2. Our team name: **A-Team**. Our Slack channel in the course Slack team: **a-team**
