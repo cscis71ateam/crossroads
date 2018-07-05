@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+    //Bootstrap row starts here inside the main container coming from the layout file.
+    .row
+      .col-md-8.col-md-offset-2
+        h2.mt-5 Update Blog 
+          small.text-muted (* required field)
+        br
+        
+        //Update blog bootstrap form.
+        form(method="POST" action="/blogs/update/" + blog._id)
+          div.form-group
+            label(for='description') Blog *:
+            input#blog.form-control(type='text' value=blog.description name='description', required autofocus)
+          div.form-row
+            div.form-group.col-md-6
+                label(for='startDate') Start Date (YYYY-MM-DD):
+                input#startDate.form-control(type='date' data-provide="datepicker" value=moment(blog.startDate).format('YYYY-MM-DD') name='startDate')
+            div.form-group.col-md-6
+                label(for='endDate') Target Finish Date (YYYY-MM-DD):
+                input#endDate.form-control(type='date' value=moment(blog.endDate).format('YYYY-MM-DD') name='endDate')
+          div.form-group
+            label(for='assignee') Assigned To:
+            input#name.form-control(type='text' value=blog.assignee name='assignee')
+          .div.form-group
+                    input#id.form-control(type="hidden" value=blog._id name="_id")
+          button.btn.btn-primary(type='submit') Update Blog 
+          | &nbsp;
+          |
+          a.btn.btn-primary(href='/' role='button') Cancel

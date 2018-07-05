@@ -17,21 +17,21 @@ $(document).ready(function(){
         initializePageDisplay();
         var id = $("#id").val().trim();
         if (!id){
-            displayStatusMessage("No ID supplied! Please, try again by providing a task ID.");
+            displayStatusMessage("No ID supplied! Please, try again by providing a blog ID.");
             return;
         }
 
-        result = callRestApi ("GET", "/api/tasks/", null, null, id);
+        result = callRestApi ("GET", "/api/blogs/", null, null, id);
         if (result) {
-            displayStatusMessage("Retrieved task:");
+            displayStatusMessage("Retrieved blog:");
         }
     });
 
-    //Create a new record when a new task is submitted via Create New button
+    //Create a new record when a new blog is submitted via Create New button
     $("#create-new").on("click", function() {
         initializePageDisplay();
         if (!$("#description").val()){
-            displayStatusMessage("No description! Please, try again by providing at least the task description.");
+            displayStatusMessage("No description! Please, try again by providing at least the blog description.");
             return;
         }
 
@@ -60,11 +60,11 @@ $(document).ready(function(){
         };
         var body = JSON.stringify(data);
         var contentType = "application/json";
-        result = callRestApi ("POST", "/api/tasks/", body, contentType, null);
+        result = callRestApi ("POST", "/api/blogs/", body, contentType, null);
         if (result) {
-            displayStatusMessage("The new record has been successfully created. Please, click the READ ALL button to see the new task you created.");
+            displayStatusMessage("The new record has been successfully created. Please, click the READ ALL button to see the new blog you created.");
         } else {
-            displayStatusMessage("Oops! Something went wrong couldnot create the new task. Please, make sure that you provided the task description.");
+            displayStatusMessage("Oops! Something went wrong couldnot create the new blog. Please, make sure that you provided the blog description.");
         }
     });
 
@@ -73,12 +73,12 @@ $(document).ready(function(){
         initializePageDisplay();
         var id = $("#id").val().trim();
         if (!id){
-            displayStatusMessage("No ID supplied! Please, try again by providing a task ID.");
+            displayStatusMessage("No ID supplied! Please, try again by providing a blog ID.");
             return;
         }
         
         if (!$("#description").val()){
-            displayStatusMessage("No description! Please, try again by providing at least the task description.");
+            displayStatusMessage("No description! Please, try again by providing at least the blog description.");
             return;
         }
         
@@ -90,7 +90,7 @@ $(document).ready(function(){
         };
         var body = JSON.stringify(data);
         var contentType = "application/json";
-        result = callRestApi ("PUT", "/api/tasks/", body, contentType, id);
+        result = callRestApi ("PUT", "/api/blogs/", body, contentType, id);
         if (result) {
             displayStatusMessage("The record has been successfully updated. Please click the READ ALL button to see your update.");
         } else {
@@ -103,10 +103,10 @@ $(document).ready(function(){
         initializePageDisplay();
         var id = $("#id").val().trim();
         if (!id){
-            displayStatusMessage("No ID supplied! Please, try again by providing a task ID.");
+            displayStatusMessage("No ID supplied! Please, try again by providing a blog ID.");
             return;
         }
-        result = callRestApi ("DELETE", "/api/tasks/", null, null, id);
+        result = callRestApi ("DELETE", "/api/blogs/", null, null, id);
         if (result) {
             displayStatusMessage("The record has been successfully deleted. PLease, click the READ ALL button to check the deletion.");
         } else {
@@ -130,9 +130,9 @@ function initializePageDisplay() {
 }
 
 function retrieveAndDsiplayCurrentRecords() {
-    result = callRestApi ("GET", "/api/tasks/", null, null, null);
+    result = callRestApi ("GET", "/api/blogs/", null, null, null);
     if (result) {
-        displayStatusMessage("Current tasks:");
+        displayStatusMessage("Current blogs:");
     }
 }
 

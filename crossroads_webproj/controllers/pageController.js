@@ -2,18 +2,18 @@ const fetch = require('node-fetch');
 
 var pageController = {};
 
-//Retrieve all tasks
+//Retrieve all blogs
 pageController.readAll = function(req, res, next) {
     var host = 'http://' + req.headers.host;
-    var url = host + '/api/tasks';
+    var url = host + '/api/blogs';
     try {
         fetch(url, {method: 'GET'})
         .then(function(response) {
             return response.json();
         })
-        .then(function(tasks) {
+        .then(function(blogs) {
             res.render("index", {
-                taskList: tasks,
+                blogList: blogs,
                 flashMsgSuccess: req.flash("oprSuccessfull"),
                 flashMsgError: req.flash("oprError")
             });
