@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    //Bootstrap row starts here inside the main container coming from the layout file.
+    .row
+      .col-md-8.col-md-offset-2
+        h3.mt-5.text-danger Sure you want to delete this blog? 
+        br
+        
+        //Delete blog bootstrap form.
+        form(method="POST" action="/blogs/delete/" + blog._id)
+          div.form-group
+            label(for='description') Blog:
+            input#blog.form-control(type='text' value=blog.description name='description', readonly disabled)
+          div.form-row
+            div.form-group.col-md-6
+                label(for='startDate') Start Date:
+                input#startDate.form-control(type='date' data-provide="datepicker" value=moment(blog.startDate).format('YYYY-MM-DD') name='startDate' readonly disabled)
+            div.form-group.col-md-6
+                label(for='endDate') Target Finish Date:
+                input#endDate.form-control(type='date' value=moment(blog.endDate).format('YYYY-MM-DD') name='endDate' readonly disabled)
+          div.form-group
+            label(for='assignee') Assigned To:
+            input#name.form-control(type='text' value=blog.assignee name='assignee' readonly disabled)
+          .div.form-group
+                    input#id.form-control(type="hidden" value=blog._id name="_id")
+          button.btn.btn-primary(type='submit') Yes 
+          | &nbsp;
+          |
+          a.btn.btn-primary(href='/' role='button') Cancel
