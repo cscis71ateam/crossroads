@@ -2,41 +2,28 @@ extends layout
 
 block content
   //Bootstrap row starts here inside the main container from the layout file.
-  .row
-  
-    //Create the list heading with the title.
-    .col-md-8.col-md-offset-2
-      h2.mt-5= title
+  h1.display-3 Welcome to CrossRoads.
       br
-
-      //Put an instruction on how to create a new task.
-      h5 Use the 
-        a(href='/tasks/create').text-primary Create Task
-        |  menu item to create a new task.
-      br
-
-      //Present the data in a bootstrap table.
-      if flashMsgSuccess && flashMsgSuccess.length > 0
-                p.alert.alert-success #{flashMsgSuccess}
-      if flashMsgError && flashMsgError.length > 0
-                p.alert.alert-danger #{flashMsgFailure}
-      table.table.table-striped.table-inverse
-        thead
-          tr
-            th Task
-            th Start Date
-            th Target Finish Date
-            th Assigned To
-            th  
-            th   
-        tbody
-          //Repeat each task in the task list and put each task in a table row.
-          each task in taskList
-            tr
-              td #{task.description}
-              td #{moment(task.startDate).format('YYYY-MM-DD')}
-              td #{moment(task.endDate).format('YYYY-MM-DD')}
-              td #{task.assignee}
-              td: a(href='/tasks/update/' + task._id) Update
-              td: a(href='/tasks/delete/' + task._id) Delete
+  p
+    | Here at Crossroads our goal is to help our students  easily navigate the ups and downs of the on campus experience. On our site, one can find information from our past and current students on our blog page and forums. Information that&rsquo;s geared towards improving your experience.
+    // <p><a class="btn btn-outline-dark text-dark" href="#" role="button">Learn more &raquo;</a></p>
+  .container
+    // Example row of columns
+    .row
+      .col-md-4
+        h2 Blog
+        p
+          | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        // <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      .col-md-4
+        h2 Forum
+        p
+          | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        // <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      .col-md-4
+        h2 Information
+        p
+          | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit.
+        // <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    hr
 

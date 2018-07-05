@@ -16,7 +16,8 @@ var dbPW = process.env.DB_PWD;
 var dbUri= 'mongodb://'
         + dbUser + ':'
         + dbPW
-        + '@beehive-shard-00-00-en2oa.mongodb.net:27017,beehive-shard-00-01-en2oa.mongodb.net:27017,beehive-shard-00-02-en2oa.mongodb.net:27017/projtodo?ssl=true&replicaSet=Beehive-shard-0&authSource=admin';
+        //+ '@beehive-shard-00-00-en2oa.mongodb.net:27017,beehive-shard-00-01-en2oa.mongodb.net:27017,beehive-shard-00-02-en2oa.mongodb.net:27017/projtodo?ssl=true&replicaSet=Beehive-shard-0&authSource=admin';
+        + '@beehive-shard-00-00-en2oa.mongodb.net:27017,beehive-shard-00-01-en2oa.mongodb.net:27017,beehive-shard-00-02-en2oa.mongodb.net:27017/crossroads?ssl=true&replicaSet=Beehive-shard-0&authSource=admin';
 
 mongoose.connect(dbUri)
   .then(() => {
