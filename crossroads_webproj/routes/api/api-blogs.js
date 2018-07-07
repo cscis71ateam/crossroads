@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var tasks = require('../../controllers/apiTaskController');
+var blogs = require('../../controllers/apiblogController');
 
-const TaskService = require('../../controllers/taskServiceController');
+const blogService = require('../../controllers/blogServiceController');
 
 //Cross Origin Resource Sharing, Content Type and other common configurations
 router.use((req, res, next) => {
@@ -26,19 +26,19 @@ router.use((req, res, next) => {
     next();
 });
 
-//List all tasks
-router.get('/', tasks.readAll);
+//List all blogs
+router.get('/', blogs.readAll);
 
-//Find a task by id
-router.get('/:id', tasks.readById); 
+//Find a blog by id
+router.get('/:id', blogs.readById); 
 
-//Create a new task
-router.post("/", tasks.create); 
+//Create a new blog
+router.post("/", blogs.create); 
 
-//Update a task
-router.put('/:id', tasks.update); 
+//Update a blog
+router.put('/:id', blogs.update); 
 
-//Delete a task
-router.delete('/:id', tasks.delete); 
+//Delete a blog
+router.delete('/:id', blogs.delete); 
 
 module.exports = router;

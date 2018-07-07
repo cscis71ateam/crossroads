@@ -28,14 +28,14 @@ mongoose.connect(dbUri)
   });
 
 var index = require('./routes/index');
-var tasks = require('./routes/tasks');
-var apitasks = require('./routes/api/api-tasks');
+var blogs = require('./routes/blogs');
+var apiblogs = require('./routes/api/api-blogs');
 var app = express();
 
 app.locals.moment = require('moment');
 
 //Global variables to share data across page
-app.locals.taskList = [{description:"Sample task",startDate:"2018-03-20",endDate:"2018-04-19",assignee:"Mo Faruqe"}];
+app.locals.blogList = [{description:"Sample blog",startDate:"2018-03-20",endDate:"2018-04-19",assignee:"Mo Faruqe"}];
 
 app.use(cookieParser('cscie31-secret'));
 app.use(session({
@@ -57,8 +57,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/tasks', tasks);
-app.use('/api/tasks', apitasks);
+app.use('/blogs', blogs);
+app.use('/api/blogs', apiblogs);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
