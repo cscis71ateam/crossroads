@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+    //Bootstrap row starts here inside the main container coming from the layout file.
+    - var img = '/images/' + blog.image_file_name
+    - var imgAlt = 'An image of ' + blog.image_file_name
+    .row
+      .col-md-8.col-md-offset-2
+        h3.mt-5.text-danger= blog.title 
+        br
+        h5.mt-5.text-danger= blog.author
+        //img(src=img, alt=imgAlt, height='200', width='640')
+        br
+        br
+        p= blog.description
+        
+        a.btn.btn-primary(href='/blogs' role='button') Go to Blog List

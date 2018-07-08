@@ -10,9 +10,9 @@ block content
       br
 
       //Put an instruction on how to create a new task.
-      h5  
+      //h5  
         a(href='/blogs/create').text-primary Create a New Blog
-      br
+      //br
 
       //Present the data in a bootstrap table.
       if flashMsgSuccess && flashMsgSuccess.length > 0
@@ -26,7 +26,8 @@ block content
             th Author
             th Create Date
             th  
-            th   
+            //th  
+            //th 
         tbody
           //Repeat each blog in the blog list and put each blog in a table row.
           each blog in blogList
@@ -34,5 +35,6 @@ block content
               td #{blog.title}
               td #{blog.author}
               td #{moment(blog.createDate).format('YYYY-MM-DD')}
-              td: a(href='/blogs/update/' + blog._id) Update
-              td: a(href='/blogs/delete/' + blog._id) Delete
+              td: a(href='/blogs/view/' + blog._id) View
+              //td: a(href='/blogs/update/' + blog._id) Update
+              //td: a(href='/blogs/delete/' + blog._id) Delete

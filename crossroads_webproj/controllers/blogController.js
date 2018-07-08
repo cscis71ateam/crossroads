@@ -27,6 +27,28 @@ blogController.readAll = function(req, res, next) {
     }
 }
 
+//Retrieve a blog from ID
+blogController.readOnlyById = function (req, res, next) {
+    var blogId = req.params.blogid;
+    var host = 'http://' + req.headers.host;
+    var url = host + '/api/blogs/' + blogId;
+    try {
+        fetch(url, {method: 'GET'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(blog) {
+            res.render("../views/blogs/view", {
+                blog: blog
+            });
+        });
+    } catch (err){
+        console.log(err);
+        flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
+        res.redirect('/blogs');
+    }
+};
+
 //Display form to create a new blog
 blogController.displayForm = function(req, res, next) {
     res.render('../views/blogs/create', { title: 'Add a new blog' });
