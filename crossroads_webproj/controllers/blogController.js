@@ -44,7 +44,7 @@ blogController.create =  function (req,res,next) {
       publish_dt: new Date(),
       update_dt: new Date()
     };
-    console.log(newBlog);
+    //console.log(newBlog);
     var host = 'http://' + req.headers.host;
     var url = host + '/api/blogs/';
     try {
@@ -61,7 +61,7 @@ blogController.create =  function (req,res,next) {
         .then(function() {
             req.flash("oprSuccessfull","Blog has been added successfully.");
             //res.redirect('/');
-            res.redirect('/blogs/create');
+            res.redirect('/blogs');
         });
     } catch (err){
         console.log(err);
@@ -89,7 +89,7 @@ blogController.readById = function (req, res, next) {
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 
@@ -120,12 +120,14 @@ blogController.update = function (req, res, next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Blog has been updated successfully.");
-            res.redirect('/');
+            //res.redirect('/');
+            res.redirect('/blogs');
         });
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 
@@ -147,7 +149,7 @@ blogController.readByIdToDelete = function (req, res, next) {
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 
@@ -165,12 +167,12 @@ blogController.delete = function (req, res, next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Blog has been deleted successfully.");
-            res.redirect('/');
+            res.redirect('/blogs');
         });
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 

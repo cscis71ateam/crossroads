@@ -12,20 +12,20 @@ block content
         form(method="POST" action="/blogs/update/" + blog._id)
           div.form-group
             label(for='title') Title *:
-            input#title.form-control(type='text', placeholder='Blog Title' name='title', required autofocus)
+            input#title.form-control(type='text', value=blog.title name='title', required autofocus)
           div.form-row
             div.form-group.col-md-6
                 label(for='author') Author *:
-                input#author.form-control(type='text', placeholder='Author' name='author', required autofocus)
+                input#author.form-control(type='text', value=blog.author name='author', required autofocus)
             div.form-group.col-md-6
                 label(for='image_file_name') Image File Name:
-                input#image_file_name.form-control(type='text', placeholder='Image File Name with Extension' name='image_file_name')
+                input#image_file_name.form-control(type='text', value=blog.image_file_name, name='image_file_name')
           div.form-group
             label(for='description') Text Contents *:
-            textarea#description.form-control(type='text', rows='6' placeholder='Blog Text Contents' name='description', required autofocus)
-          .div.form-group
-                    input#id.form-control(type="hidden" value=blog._id name="_id")
+            input#description.form-control(type='text', rows='6', value=blog.description, name='description', required autofocus)
+          div.form-group
+            input#id.form-control(type="hidden" value=blog._id name="_id")
           button.btn.btn-primary(type='submit') Update Blog 
           | &nbsp;
           |
-          a.btn.btn-primary(href='/' role='button') Cancel
+          a.btn.btn-primary(href='/blogs' role='button') Cancel
