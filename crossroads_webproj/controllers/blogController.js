@@ -14,7 +14,8 @@ blogController.readAll = function(req, res, next) {
             return response.json();
         })
         .then(function(blogs) {
-            res.render("index", {
+            //res.render("index", {
+            res.render("../views/blogs/list", {
                 blogList: blogs,
                 flashMsgSuccess: req.flash("oprSuccessfull"),
                 flashMsgError: req.flash("oprError")
@@ -37,9 +38,13 @@ blogController.create =  function (req,res,next) {
       title: req.body.title,
       description: req.body.description,
       author: req.body.author,
-      createDate: req.body.create_dt,
+      image_file_name: req.body.image_file_name,
+      published: 1,
+      create_dt: new Date(),
+      publish_dt: new Date(),
+      update_dt: new Date()
     };
-    
+    console.log(newBlog);
     var host = 'http://' + req.headers.host;
     var url = host + '/api/blogs/';
     try {
@@ -55,12 +60,14 @@ blogController.create =  function (req,res,next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Blog has been added successfully.");
-            res.redirect('/');
+            //res.redirect('/');
+            res.redirect('/blogs/create');
         });
     } catch (err){
         console.log(err);
         req.flash("oprError","Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/blogs/create');
     }
 };
 

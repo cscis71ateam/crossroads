@@ -11,18 +11,18 @@ block content
         //Update blog bootstrap form.
         form(method="POST" action="/blogs/update/" + blog._id)
           div.form-group
-            label(for='description') Blog *:
-            input#blog.form-control(type='text' value=blog.description name='description', required autofocus)
+            label(for='title') Title *:
+            input#title.form-control(type='text', placeholder='Blog Title' name='title', required autofocus)
           div.form-row
             div.form-group.col-md-6
-                label(for='startDate') Start Date (YYYY-MM-DD):
-                input#startDate.form-control(type='date' data-provide="datepicker" value=moment(blog.startDate).format('YYYY-MM-DD') name='startDate')
+                label(for='author') Author *:
+                input#author.form-control(type='text', placeholder='Author' name='author', required autofocus)
             div.form-group.col-md-6
-                label(for='endDate') Target Finish Date (YYYY-MM-DD):
-                input#endDate.form-control(type='date' value=moment(blog.endDate).format('YYYY-MM-DD') name='endDate')
+                label(for='image_file_name') Image File Name:
+                input#image_file_name.form-control(type='text', placeholder='Image File Name with Extension' name='image_file_name')
           div.form-group
-            label(for='assignee') Assigned To:
-            input#name.form-control(type='text' value=blog.assignee name='assignee')
+            label(for='description') Text Contents *:
+            textarea#description.form-control(type='text', rows='6' placeholder='Blog Text Contents' name='description', required autofocus)
           .div.form-group
                     input#id.form-control(type="hidden" value=blog._id name="_id")
           button.btn.btn-primary(type='submit') Update Blog 

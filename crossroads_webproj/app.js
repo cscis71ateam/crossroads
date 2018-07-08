@@ -28,6 +28,7 @@ mongoose.connect(dbUri)
   });
 
 var index = require('./routes/index');
+var info = require('./routes/info');
 var blogs = require('./routes/blogs');
 var apiblogs = require('./routes/api/api-blogs');
 var app = express();
@@ -57,6 +58,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/info', info);
 app.use('/blogs', blogs);
 app.use('/api/blogs', apiblogs);
 

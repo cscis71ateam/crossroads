@@ -10,18 +10,18 @@ block content
         //Delete blog bootstrap form.
         form(method="POST" action="/blogs/delete/" + blog._id)
           div.form-group
-            label(for='description') Blog:
-            input#blog.form-control(type='text' value=blog.description name='description', readonly disabled)
+            label(for='title') Title *:
+            input#title.form-control(type='text', placeholder='Blog Title' name='title' readonly disabled)
           div.form-row
             div.form-group.col-md-6
-                label(for='startDate') Start Date:
-                input#startDate.form-control(type='date' data-provide="datepicker" value=moment(blog.startDate).format('YYYY-MM-DD') name='startDate' readonly disabled)
+                label(for='author') Author*:
+                input#author.form-control(type='text', placeholder='Author' name='author' readonly disabled)
             div.form-group.col-md-6
-                label(for='endDate') Target Finish Date:
-                input#endDate.form-control(type='date' value=moment(blog.endDate).format('YYYY-MM-DD') name='endDate' readonly disabled)
+                label(for='image_file_name') Image File Name:
+                input#image_file_name.form-control(type='text', placeholder='Image File Name with Extension' name='image_file_name' readonly disabled)
           div.form-group
-            label(for='assignee') Assigned To:
-            input#name.form-control(type='text' value=blog.assignee name='assignee' readonly disabled)
+            label(for='description') Text Contents *:
+            textarea#description.form-control(type='text', rows='3' placeholder='Blog Text Contents' name='description' readonly disabled)
           .div.form-group
                     input#id.form-control(type="hidden" value=blog._id name="_id")
           button.btn.btn-primary(type='submit') Yes 
