@@ -20,4 +20,14 @@ describe('blogModel', function() {
     it("expects blog to be an instance of the blogModel", function () {
         assert.expect(blog).to.be.an.instanceof(blogModel);
     })
+    it("should be valid even if image is not included", function () {
+        blog.validate(function (err) {
+            assert.should(err.errors.image_file_name).not.exist();
+        });
+    })
+    it("should be valid even if update date is not included", function () {
+        blog.validate(function (err) {
+            assert.should(err.errors.update_dt).not.exist();
+        });
+    })
 });
