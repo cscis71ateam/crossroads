@@ -146,7 +146,7 @@ Have some troubles with the unit tests, need to do more research about the code.
 
 9. **Unit testing**
 <br/>We conducted 22 unit tests which can be found in the test folder in the GitHub Repo for Crossroads. All tests passed. 	
-<br/>![Unit tests](https://github.com/faruqem/crossroads/blob/master/media/Sprint%202%20Unit%20Test.png)
+<br/>![Unit tests](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Unit%20Test.png)
 
 10. **Sprint Review**
 <br/>Our Product Increment is working software, which can be accessed at: http://harvard.crossroads.guru/ 
@@ -173,10 +173,11 @@ Have some troubles with the unit tests, need to do more research about the code.
 
 11. **You have a Continuous Integration**
 <br/>We have set up the Continuous Integration by utilizing CircleCI, however we have issues in executing the tests. This is a impediment towards reaching our sprint goal.
-<br/>![CI error](https://github.com/faruqem/crossroads/blob/master/media/Sprint%202%20Circle%20CI%20Status%20Pic%201.png)
+<br/>![CI error](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Circle%20CI%20Status%20Pic%201.png)
 
 
-12. You have a Continuous Deployment system running. The CD system deploys your software to a production-like environment. The CD system executes additional tests of your software in the production-like environment. The CD system deploys your software to a live production environment. Your live production environment works properly. You have provided evidence that your CD system exists and behaves properly.
+12. **Continuous Deployment** 
+<br/>This is one of our impediments. We are having some challenges in settng it up for our current deployment environment<br/>
 
 
 **Update to previous parts:**
