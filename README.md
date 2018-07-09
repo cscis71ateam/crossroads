@@ -29,7 +29,7 @@ An web application for the future/potential/returning summer students at Harvard
 5. Please, see URL in #4.
 
 6. **Sprint Burndown Chart**
-<br/>![Sprint review](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Sprint%20Burndown%20Picture.png)
+<br/>![Sprint review](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Burndown%20Picture.png)
 <br/>In Sprint 2, our actual burndown is close to the ideal burndown. After Sprint 1, we adapted our refinement process by breaking down the PBIs into smaller and easily shippable items. Furthermore, we had an extra day in the sprint and the basic infrastructure were already in place, which gave the Development Team more time to focus on delivering actual value to the users.
 
 7. **Daily Scrum**
