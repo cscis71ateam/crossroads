@@ -1,29 +1,41 @@
 extends ../layout
 
 block content
-    //Bootstrap row starts here inside the main container coming from the layout file.
-    .row
-      .col-md-8.col-md-offset-2
-        h2.mt-5 Add a Blog 
-          small.text-muted (* required field)
-        br
-
-        //Create a new blog bootstrap form.
-        form(method='POST' action='/blogs/create/')
-          div.form-group
-            label(for='description') Blog *:
-            input#blog.form-control(type='text', placeholder='Blog description' name='description', required autofocus)
-          div.form-row
-            div.form-group.col-md-6
-                label(for='startDate') Start Date:
-                input#startdate.form-control(type='date', placeholder='yyyy-dd-mm' name='startDate')
-            div.form-group.col-md-6
-                label(for='endDate') Target Finish Date:
-                input#enddate.form-control(type='date', placeholder='yyyy-dd-mm' name='endDate')
-          div.form-group
-            label(for='assignee') Assigned To:
-            input#name.form-control(type='text', placeholder='Assignee' name='assignee')
-          button.btn.btn-primary(type='submit') Add Blog
-          | &nbsp;
-          |
-          a.btn.btn-primary(href='/' role='button') Cancel
+  //Bootstrap row starts here inside the main container coming from the layout file.
+  main(role='main')
+    // Page Content
+    .container
+      //h2.mt-5= title
+      br
+      br
+      .row
+        // Post Content Column
+        .col-lg-8
+          // Title
+          h2.mt-5 Add a Blog 
+            small.text-muted (* required field)
+          br
+          if flashMsgSuccess && flashMsgSuccess.length > 0
+                  p.alert.alert-success #{flashMsgSuccess}
+          if flashMsgError && flashMsgError.length > 0
+                  p.alert.alert-danger #{flashMsgFailure}
+          //Create a new blog bootstrap form.
+          form.blogpost(method='POST' action='/blogs/create/')
+            div.form-group
+              label(for='title') Title *:
+              input#title.form-control(type='text', placeholder='Blog Title' name='title', required autofocus)
+            div.form-row
+              //div.form-group.col-md-6
+              div.form-group.col-md-12
+                  label(for='author') Author *:
+                  input#author.form-control(type='text', placeholder='Author' name='author', required autofocus)
+              //div.form-group.col-md-6
+                  label(for='image_file_name') Image File Name:
+                  input#image_file_name.form-control(type='text', placeholder='Image File Name with Extension' name='image_file_name')
+            div.form-group
+              label(for='description') Text Contents *:
+              textarea#description.form-control(type='text', rows='6' placeholder='Blog Text Contents' name='description', required autofocus)
+            button.btn.btn-primary(type='submit') Add Blog
+            | &nbsp;
+            |
+            a.btn.btn-primary(href='/blogs' role='button') Cancel

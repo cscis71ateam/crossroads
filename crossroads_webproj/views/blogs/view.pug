@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+    //Bootstrap row starts here inside the main container coming from the layout file.
+    - var img = '/images/' + blog.image_file_name
+    - var imgAlt = 'An image of ' + blog.image_file_name
+    //img(src=img, alt=imgAlt, height='200', width='640')
+    main(role='main')
+      // Page Content
+      .container
+        br
+        br
+        br
+        .row
+          // Post Content Column
+          .col-lg-8
+            // Title
+            h1.mt-4= blog.title
+            // Author
+            p.lead
+              | by &nbsp;
+              = blog.author
+          
+            // Date/Time
+            p.lead
+              | Created: &nbsp;
+              = moment(blog.create_dt).format('YYYY-MM-DD')
+            
+            // Preview Image
+            //img.img-fluid.rounded(src='http://placehold.it/900x300', alt='')
+            hr
+            // Post Content
+            p= blog.description
+            
+            
+            hr
+            a.btn.btn-primary(href='/blogs' role='button') Go to Blog List

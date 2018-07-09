@@ -14,7 +14,8 @@ blogController.readAll = function(req, res, next) {
             return response.json();
         })
         .then(function(blogs) {
-            res.render("index", {
+            //res.render("index", {
+            res.render("../views/blogs/list", {
                 blogList: blogs,
                 flashMsgSuccess: req.flash("oprSuccessfull"),
                 flashMsgError: req.flash("oprError")
@@ -25,6 +26,28 @@ blogController.readAll = function(req, res, next) {
         res.end('Oops! Something went wrong. Please, try again.');
     }
 }
+
+//Retrieve a blog from ID
+blogController.readOnlyById = function (req, res, next) {
+    var blogId = req.params.blogid;
+    var host = 'http://' + req.headers.host;
+    var url = host + '/api/blogs/' + blogId;
+    try {
+        fetch(url, {method: 'GET'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(blog) {
+            res.render("../views/blogs/view", {
+                blog: blog
+            });
+        });
+    } catch (err){
+        console.log(err);
+        flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
+        res.redirect('/blogs');
+    }
+};
 
 //Display form to create a new blog
 blogController.displayForm = function(req, res, next) {
@@ -37,9 +60,13 @@ blogController.create =  function (req,res,next) {
       title: req.body.title,
       description: req.body.description,
       author: req.body.author,
-      createDate: req.body.create_dt,
+      image_file_name: req.body.image_file_name,
+      published: 1,
+      create_dt: new Date(),
+      publish_dt: new Date(),
+      update_dt: new Date()
     };
-    
+    //console.log(newBlog);
     var host = 'http://' + req.headers.host;
     var url = host + '/api/blogs/';
     try {
@@ -55,12 +82,14 @@ blogController.create =  function (req,res,next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Blog has been added successfully.");
-            res.redirect('/');
+            //res.redirect('/');
+            res.redirect('/blogs');
         });
     } catch (err){
         console.log(err);
         req.flash("oprError","Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/blogs/create');
     }
 };
 
@@ -82,7 +111,7 @@ blogController.readById = function (req, res, next) {
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 
@@ -113,12 +142,14 @@ blogController.update = function (req, res, next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Blog has been updated successfully.");
-            res.redirect('/');
+            //res.redirect('/');
+            res.redirect('/blogs');
         });
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 
@@ -140,7 +171,7 @@ blogController.readByIdToDelete = function (req, res, next) {
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 
@@ -158,12 +189,12 @@ blogController.delete = function (req, res, next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Blog has been deleted successfully.");
-            res.redirect('/');
+            res.redirect('/blogs');
         });
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        res.redirect('/blogs');
     }
 };
 

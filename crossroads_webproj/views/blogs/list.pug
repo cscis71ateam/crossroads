@@ -1,0 +1,46 @@
+extends ../layout
+
+block content
+  //Bootstrap row starts here inside the main container from the layout file.
+  main(role='main')
+    // Page Content
+    .container
+      //h2.mt-5= title
+      br
+      br
+      .row
+        // Post Content Column
+        .col-lg-8
+          // Title
+          h1.mt-5 List of Blogs
+          br
+
+          //Put an instruction on how to create a new task.
+          //h5  
+            a(href='/blogs/create').text-primary Create a New Blog
+          //br
+
+          //Present the data in a bootstrap table.
+          if flashMsgSuccess && flashMsgSuccess.length > 0
+                    p.alert.alert-success #{flashMsgSuccess}
+          if flashMsgError && flashMsgError.length > 0
+                    p.alert.alert-danger #{flashMsgFailure}
+          table.table.table-striped.table-inverse
+            thead
+              tr
+                th Title
+                th Author
+                th Create Date
+                th  
+                //th  
+                //th 
+            tbody
+              //Repeat each blog in the blog list and put each blog in a table row.
+              each blog in blogList
+                tr
+                  td #{blog.title}
+                  td #{blog.author}
+                  td #{moment(blog.createDate).format('YYYY-MM-DD')}
+                  td: a(href='/blogs/view/' + blog._id) View
+                  //td: a(href='/blogs/update/' + blog._id) Update
+                  //td: a(href='/blogs/delete/' + blog._id) Delete

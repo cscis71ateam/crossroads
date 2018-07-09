@@ -7,6 +7,9 @@ var blogs = require('../controllers/blogController');
 //will see all blogs from the home page using route "/"
 router.get('/', blogs.readAll);
 
+//Retrieve a blog by ID to view obly
+router.get("/view/:blogid", blogs.readOnlyById);
+
 //Display form to create a new blog
 router.get('/create', blogs.displayForm);
 

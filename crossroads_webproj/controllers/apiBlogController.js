@@ -30,7 +30,11 @@ apiBlogController.create =  function (req,res,next) {
         title: req.body.title,
         description: req.body.description,
         author: req.body.author,
-        createDate: req.body.create-dt,
+        image_file_name: req.body.image_file_name,
+        published: 1,
+        create_dt: new Date(),
+        publish_dt: new Date(),
+        update_dt: new Date()
     };
     //console.log(blog);
     BlogService.create(blog)

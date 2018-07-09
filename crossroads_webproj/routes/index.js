@@ -6,7 +6,7 @@ var pages = require('../controllers/pageController');
 router.use(flash());
 
 /** 
- * GET home page with the task list displayed. 
+ * GET home page with the blog list displayed. 
  */
 router.get('/', pages.readAll);
 
