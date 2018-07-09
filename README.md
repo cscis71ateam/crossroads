@@ -154,6 +154,7 @@ Have some troubles with the unit tests, need to do more research about the code.
 **Sprint review 9/7/2018:**
 <br/>**Inspect:**
 <br/>We conducted our sprint review for Sprint 2 with Linh, our real-life stakeholder, participating. A photo is attached. Attached is a photo of Linh and the Scrum Team conducting the Sprint Review in person.
+<br/>![Sprint review](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Sprint%20Review.png)
 <br/>![Sprint review](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Sprint%20Review%20Pic%201.png)
 
 **Feedbacks from stakeholder Linh**
