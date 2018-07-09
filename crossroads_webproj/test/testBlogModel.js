@@ -17,4 +17,7 @@ describe('blogModel', function() {
             assert.expect(err.errors.description).to.exist;
         })
     })
+    it("expects blog to be an instance of the blogModel", function () {
+        assert.expect(blog).to.be.an.instanceof(blogModel);
+    })
 });
