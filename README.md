@@ -165,7 +165,7 @@ Added is some photos of our rehearsal session.
 7. **Daily Scrum**
 **July 7, 2018**
 We held a physical Daily Scrum at 10 am time-boxed to 15 minutes, facilitated by our Scrum Master, Simon.
-<br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Daily%20Scrum%20Pic%201.png)
+<br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint3%20Daily%20Scrum1.png)
 
 <br/><br/>**The whole Scrum Team**
 * *What did we do yesterday?*
