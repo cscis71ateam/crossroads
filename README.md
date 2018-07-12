@@ -3,10 +3,9 @@
 ## Team: **A-Team**
 ## Project Description: 
 A web application for the future/potential/returning summer students at Harvard with usefull information, tips, suggestions from the past/current Harvard summer students.
-You can find our project here:
-http://harvard.crossroads.guru
+You can find our project here: http://harvard.crossroads.guru
 
-##Project Part4
+## Project Part4
 1. **Sprint Forecast**
 <br/>Sprint Goal: Implementing edit, delete and formatting features
 
