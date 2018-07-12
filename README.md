@@ -105,7 +105,7 @@ Look into mod programming and BDD part.
 10. **BDD/TDD and unit tests**
 <br/>We conducted 32 unit tests which can be found in the test folder in the GitHub Repo for Crossroads. All tests passed. We also added one BDD test - the test passed which can be seen from the screenshot.
 
-<br/><br/>![BDD test](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20BDD%20Screenshot.pngg)
+<br/><br/>![BDD test](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20BDD%20Screenshot.png)
 
 11. **Continuous Integration**
 <br/>We use Semaphore to build our code and execute tests everytime code is published in GitHub. If build is succesfully passed, Semaphore will automatically deploy our new source application to production.
@@ -165,7 +165,7 @@ Added is some photos of our rehearsal session.
 7. **Daily Scrum**
 **July 7, 2018**
 We held a physical Daily Scrum at 10 am time-boxed to 15 minutes, facilitated by our Scrum Master, Simon.
-<br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint3%20Daily%20Scrum1.png)
+<br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%202%20Daily%20Scrum%20Pic%201.png)
 
 <br/><br/>**The whole Scrum Team**
 * *What did we do yesterday?*
