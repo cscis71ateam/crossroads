@@ -2,7 +2,144 @@
 ## CSCI S-71 Agile Software Development Group Project
 ## Team: **A-Team**
 ## Project Description: 
-An web application for the future/potential/returning summer students at Harvard with usefull information, tips, suggestions from the past/current Harvard summer students.
+A web application for the future/potential/returning summer students at Harvard with usefull information, tips, suggestions from the past/current Harvard summer students.
+
+<br/>You can find our project here:
+<br/>http://harvard.crossroads.guru
+
+##Project Part4
+1. **Sprint Forecast**
+<br/>Sprint Goal: Implementing edit, delete and formatting features
+
+<br/>Based on a Yesterday’s Weather forecast, we have forecasted 34 story points for Sprint 2. We had 34 story points done in Sprint 2. Therefore, the Development Team and the Product Owner decided to forecast 34 story points, which is the same forecast as previous sprint.
+
+2. **Sprint Backlog**
+<br/>We pulled stories into our sprint backlog. Only Development Team members participated in this activity.
+<br/>We decided on the following sprint backlog:
+* Edit a Blog Post - estimated to 13 story points
+* Delete a Blog Post - estimated to 8 story points
+* Format Blog Post into Multi Paragraphs - estimated to 13 story points
+
+<br/>In total a sprint backlog estimated to 34 story points.
+
+3. **Our stories were not larger than half the size of the forecast.** 
+<br/>Please, refer to #2.
+
+
+4. **Task Backlog**
+<br/>In Trello, we added a checklist to all Product Backlog items called tasks, where tasks are tracked.
+https://trello.com/b/RdosOtmY/a-team-kanban-board 
+
+
+5. Please, see URL in #4.
+
+
+6. **Burndown Chart**
+<br/><br/>![Burndown Chart Sprint 3](https://github.com/cscis71ateam/crossroads/blob/master/media/Crossroads%20Burndown%20for%20Sprint%203.png)
+
+<br/>In Sprint 3, only 18 story points were done and the PBI ‘Format Blog Post in Multiple Paragraphs’ was not done - a story estimated to 13 story points. We had impediments from last sprint in getting CI/CD running. Furthermore, we implemented a BDD test, which was an impediment to reaching our sprint goal, since it consumed more focus than expected dragging us away from the formatting story. 
+
+7. **Daily Scrum**
+
+**July 11, 2018** 
+We held a physical Daily Scrum at 10 am time-boxed to 15 minutes, facilitated by our Scrum Master, Simon.
+<br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Daily%20Scrum.jpg)
+
+
+**The whole Scrum Team**
+* *What did we do yesterday?*
+Yesterday we did Sprint Planning and Backlog refinement so that we could have our PBIs meeting our Definition of Ready. 
+
+**General**
+* *How do we remove impediments?*
+Doing group brainstorming about possible solutions for CI/CD and watch training videos - if one finds a good training video, it should be shared in our Slack channel.
+
+**Mo** 
+* *What did you do yesterday?*
+Finished the view/delete function of the blog, researched CI/CD. Deployed the code to GitHub.
+
+* *What are you gonna do today?*
+Look into the rest of the Sprint PBIs.
+
+* *Impediment*
+CI/CD part.
+
+**Anna** 
+* *What did you do yesterday?*
+Research some documentation about blog formatting.
+
+* *What are you gonna do today?*
+Find solutions on Stackoverflow to improve our blog formatting.
+
+* *Impediment*
+Find the correct documentation which really helps.
+
+**Chun**
+* *What did you do yesterday?*
+Finished the first draft of the slides for Sprint Review.
+
+* *What are you gonna do today?*
+Perform the first rehearsal.
+
+* *Impediment*
+The basic layout of the pages is simple, but the CI/CD will be important, need to come up with a basic layout and work with back-end. Chun will be pair programming with Mo to ensure that the front-end and back-end is integrated.
+
+**Simon**
+* *What did you do yesterday?*
+Did more test and finished the CI/CD part.
+
+* *What are you gonna do today?*
+Look into the CI/CD, write BDD/TDD tests.
+
+* *Impediment*
+Look into mod programming and BDD part.
+
+
+8. **Update your sprint backlog task board and burndown chart.**
+<br/>Please, refer to #4.
+
+9. **Pair programming.**
+<br/>Attached a photo of our team working together on both pair programming.
+
+<br/><br/>![Pair Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Pair%20Programming.png)
+<br/><br/>![Pair Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Mob%20Programming.jpg)
+
+10. **BDD/TDD and unit tests**
+<br/>We conducted 32 unit tests which can be found in the test folder in the GitHub Repo for Crossroads. All tests passed. We also added one BDD test - the test passed which can be seen from the screenshot.
+
+<br/><br/>![BDD test](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20CI%20CD%20Screenshot%204.png)
+
+11. **Continuous Integration**
+You have a Continuous Integration system running. The CI system automatically builds your code every time you merge to master. The CI system executes your tests every time it builds the code. You have provided evidence that your CI system exists and behaves properly.
+
+<br/>We use Semaphore to build our code and execute tests everytime code is published in GitHub. If build is succesfully passed, Semaphore will automatically deploy our new source application to production.
+
+<br/><br/>![CI](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20CI%20CD%20Screenshot%204.png)
+
+12. **Continuous Deployment**
+You have a Continuous Deployment system running. The CD system deploys your software to a production-like environment. The CD system executes additional tests of your software in the production-like environment. The CD system deploys your software to a live production environment. Your live production environment works properly. You have provided evidence that your CD system exists and behaves properly.
+
+<br/>We use Cloud66 for Continuous Deployment which automatically deploys changes to our DigitalOcean Webserver when the tests has passed in Semaphore. 
+
+
+<br/><br/>![CD](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20BDD%20Screenshot.png)
+<br/><br/>![CD timeline](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20CI-CD%20Deployment%20Screenshot%203.png)
+
+13. **Your team conducts an in-class Sprint Review.**
+<br/>Will be done in-class July 12, 2018. 
+<br/>Our Product Increment is working software, which can be accessed at: http://harvard.crossroads.guru/ 
+
+
+14. **We rehearsed the presentation before the class.**
+Added is some photos of our rehearsal session.
+<br/><br/>![Presentation rehearsal](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Review%20Preparation.jpg)
+
+
+**Updates since previous parts:**
+<br/>Based on the feedback received after the last sprint, we adapted the following parts: 
+* Updated Trello board with new columns for previous sprint to make it easy to distinguish the historical records
+* Updated burndown chart to show “Forecast” rather than “estimated”
+
 
 ## Project Part3:
 1. **Forecast**
