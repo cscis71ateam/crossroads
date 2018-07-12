@@ -41,7 +41,7 @@ https://trello.com/b/RdosOtmY/a-team-kanban-board
 
 **July 11, 2018** 
 <br/>We held a physical Daily Scrum at 10 am time-boxed to 15 minutes, facilitated by our Scrum Master, Simon.
-<br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Daily%20Scrum.jpg)
+<br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint3%20Daily%20Scrum1.png)
 
 
 **The whole Scrum Team**
