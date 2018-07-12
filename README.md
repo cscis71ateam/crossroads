@@ -3,9 +3,8 @@
 ## Team: **A-Team**
 ## Project Description: 
 A web application for the future/potential/returning summer students at Harvard with usefull information, tips, suggestions from the past/current Harvard summer students.
-
-<br/>You can find our project here:
-<br/>http://harvard.crossroads.guru
+You can find our project here:
+http://harvard.crossroads.guru
 
 ##Project Part4
 1. **Sprint Forecast**
@@ -31,7 +30,7 @@ A web application for the future/potential/returning summer students at Harvard 
 https://trello.com/b/RdosOtmY/a-team-kanban-board 
 
 
-5. Please, see URL in #4.
+5. **Please, see URL in #4.**
 
 
 6. **Burndown Chart**
@@ -42,7 +41,7 @@ https://trello.com/b/RdosOtmY/a-team-kanban-board
 7. **Daily Scrum**
 
 **July 11, 2018** 
-We held a physical Daily Scrum at 10 am time-boxed to 15 minutes, facilitated by our Scrum Master, Simon.
+<br/>We held a physical Daily Scrum at 10 am time-boxed to 15 minutes, facilitated by our Scrum Master, Simon.
 <br/><br/>![Daily Scrum pic 1](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Daily%20Scrum.jpg)
 
 
@@ -102,27 +101,22 @@ Look into mod programming and BDD part.
 <br/>Attached a photo of our team working together on both pair programming.
 
 <br/><br/>![Pair Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Pair%20Programming.png)
-<br/><br/>![Pair Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Mob%20Programming.jpg)
+<br/><br/>![Mob Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Mob%20Programming.jpg)
 
 10. **BDD/TDD and unit tests**
 <br/>We conducted 32 unit tests which can be found in the test folder in the GitHub Repo for Crossroads. All tests passed. We also added one BDD test - the test passed which can be seen from the screenshot.
 
-<br/><br/>![BDD test](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20CI%20CD%20Screenshot%204.png)
+<br/><br/>![BDD test](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20BDD%20Screenshot.pngg)
 
 11. **Continuous Integration**
-You have a Continuous Integration system running. The CI system automatically builds your code every time you merge to master. The CI system executes your tests every time it builds the code. You have provided evidence that your CI system exists and behaves properly.
-
 <br/>We use Semaphore to build our code and execute tests everytime code is published in GitHub. If build is succesfully passed, Semaphore will automatically deploy our new source application to production.
 
 <br/><br/>![CI](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20CI%20CD%20Screenshot%204.png)
 
 12. **Continuous Deployment**
-You have a Continuous Deployment system running. The CD system deploys your software to a production-like environment. The CD system executes additional tests of your software in the production-like environment. The CD system deploys your software to a live production environment. Your live production environment works properly. You have provided evidence that your CD system exists and behaves properly.
-
 <br/>We use Cloud66 for Continuous Deployment which automatically deploys changes to our DigitalOcean Webserver when the tests has passed in Semaphore. 
 
-
-<br/><br/>![CD](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20BDD%20Screenshot.png)
+<br/><br/>![CD](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20CI-CD%20Screenshot2.png)
 <br/><br/>![CD timeline](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20CI-CD%20Deployment%20Screenshot%203.png)
 
 13. **Your team conducts an in-class Sprint Review.**
