@@ -100,7 +100,7 @@ Look into mod programming and BDD part.
 <br/>Attached a photo of our team working together on both pair programming.
 
 <br/><br/>![Pair Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Pair%20Programming.png)
-<br/><br/>![Mob Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint%203%20Mob%20Programming.jpg)
+<br/><br/>![Mob Programming](https://github.com/cscis71ateam/crossroads/blob/master/media/Sprint3%20Mob%20Programming1.png)
 
 10. **BDD/TDD and unit tests**
 <br/>We conducted 32 unit tests which can be found in the test folder in the GitHub Repo for Crossroads. All tests passed. We also added one BDD test - the test passed which can be seen from the screenshot.
