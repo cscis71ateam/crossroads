@@ -1,4 +1,4 @@
-const BlogService = require('./blogServiceController');
+ const BlogService = require('./blogServiceController');
 
 var apiBlogController = {};
 //Retrieve all blogs

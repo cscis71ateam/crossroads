@@ -5,12 +5,18 @@
   "scripts": {
     "test": "mocha",
     "start": "node ./bin/www",
-    "start-dev": "nodemon --inspect ./bin/www"
+    "start-dev": "nodemon --inspect ./bin/www",
+    "cucumber": "cucumber-js ./features -r ./steps"
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "cucumber": "^4.2.1",
     "mocha": "*",
-    "quixote": "*"
+    "mocha-cakes": "^0.9.0",
+    "quixote": "^0.14.0"
+  },
+  "engines": {
+    "node": ">=8.9.4"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
