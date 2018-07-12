@@ -1,31 +1,38 @@
 extends ../layout
 
 block content
-    //Bootstrap row starts here inside the main container coming from the layout file.
-    .row
-      .col-md-8.col-md-offset-2
-        h2.mt-5 Update Blog 
-          small.text-muted (* required field)
-        br
-        
-        //Update blog bootstrap form.
-        form(method="POST" action="/blogs/update/" + blog._id)
-          div.form-group
-            label(for='title') Title *:
-            input#title.form-control(type='text', value=blog.title name='title', required autofocus)
-          div.form-row
-            div.form-group.col-md-6
-                label(for='author') Author *:
-                input#author.form-control(type='text', value=blog.author name='author', required autofocus)
-            div.form-group.col-md-6
-                label(for='image_file_name') Image File Name:
-                input#image_file_name.form-control(type='text', value=blog.image_file_name, name='image_file_name')
-          div.form-group
-            label(for='description') Text Contents *:
-            input#description.form-control(type='text', rows='6', value=blog.description, name='description', required autofocus)
-          div.form-group
-            input#id.form-control(type="hidden" value=blog._id name="_id")
-          button.btn.btn-primary(type='submit') Update Blog 
-          | &nbsp;
-          |
-          a.btn.btn-primary(href='/blogs' role='button') Cancel
+  //Bootstrap row starts here inside the main container coming from the layout file.
+  main(role='main')
+    // Page Content
+    .container
+      //h2.mt-5= title
+      br
+      br
+      .row
+        .col-md-8.col-md-offset-2
+          h3.mt-5 Edit Blog 
+          br
+          
+          //Update blog bootstrap form.
+          form(method="POST" action="/blogs/update/" + blog._id)
+            div.form-group
+              label(for='title') Title *:
+              input#title.form-control(type='text', value=blog.title name='title', required autofocus)
+            div.form-row
+              div.form-group.col-md-12
+                  label(for='author') Author *:
+                  input#author.form-control(type='text', value=blog.author name='author', required autofocus)
+              //div.form-group.col-md-6
+                  label(for='image_file_name') Image File Name:
+                  input#image_file_name.form-control(type='text', value=blog.image_file_name, name='image_file_name')
+            div.form-group
+              label(for='description') Text Contents *:
+              //input#description.form-control(type='text', rows='6', value=blog.description, name='description', required autofocus)
+              //textarea#description.form-control( rows='6', value=blog.description, name='description', required autofocus)
+              textarea#description.form-control( rows='6', name='description', required autofocus)= blog.description
+            div.form-group
+              input#id.form-control(type="hidden" value=blog._id name="_id")
+            button.btn.btn-primary(type='submit') Update Blog 
+            | &nbsp;
+            |
+            a.btn.btn-primary(href='/blogs' role='button') Cancel
